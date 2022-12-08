@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQ</title>
+    <style>
+        body{
+            background: linear-gradient(
+    105deg,
+    #027c35 ,
+    #0df8b2 
+    
+);
+        }
+        .layout{
+            width: 600px;
+            margin: auto;
+        }
+        .accordion{
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: yellow;
+            border-radius: 10px;
+        }
+        .accordion__question p{
+            margin: 5px;
+            padding: 0;
+            font-family: Verdana;
+            font-size: 20px;
+        }
+        .accordion__answer p{
+            margin: 5px;
+            padding: 10px;
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(255, 255, 255);
+            /* background: black; */
+            background: linear-gradient(
+        105deg,
+        #f90340f1,
+        #f35c5c 
+        
+    );
+            
+            border-radius: 10px; 
+        }
+        .accordion:hover{
+            cursor: pointer;
+        }
+        .accordion__answer {
+            display: none;
+        } 
+        .accordion.active .accordion__answer {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:rgb(21, 0, 255); text-align:center">All donation process listed here</h1>
+    <div class="layout">
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>All donation process listed here</p>
+  
+            </div>
+            <div class="accordion__answer">
+                <p>If you're donating whole blood, we'll cleanse an area on your arm and insert a brand new sterile needle for the blood draw. (This feels like a quick pinch and is over in seconds.) Other types of donations, such as platelets, are made using an apheresis machine which will be connected to both arms.</p>
+  
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="accordion__question">
+                <p>How long is the process of blood donation?</p>
+  
+            </div>
+            <div class="accordion__answer">
+                <p>
+                  The entire process takes about one hour and 15 minutes; the actual donation of a pint of whole blood unit takes eight to 10 minutes. However, the time varies slightly with each person depending on several factors including the donor's health history and attendance at the blood drive.
+                </p>
+  
+            </div>
+        </div>
+    </div>
+  
+    <script>
+        let answers=document.querySelectorAll(".accordion");
+        answers.forEach((event)=>{
+            event.addEventListener('click',()=>{
+                if(event.classList.contains("active")){
+                    event.classList.remove("active");
+                }
+                else{
+                    event.classList.add("active");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
